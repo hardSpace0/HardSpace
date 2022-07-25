@@ -1,0 +1,219 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.contact-btn {
+    display: inline-block;
+    padding: 12px 50px;
+    color: #88bdbc;
+    border: 2px solid #88bdbc;
+    border-radius: 6px;
+    margin-top: 16px;
+    transition: .3s linear;
+}
+
+.contact-btn:hover {
+    background: #88bdbc;
+    color: #f2f2f2;
+}
+
+.topAbout {
+    padding: 50px;
+    text-transform: none;
+    position: relative;
+    padding: 10px;
+    padding: 3%;
+    margin: 3em;
+    align-items: center;
+    margin-left: 10%;
+    background: rgba(182, 199, 205, 0.9);
+    border-radius: 6px;
+    transition: .3s ease-out;
+    font-size: 20px;
+}
+
+.linkdIn:hover {
+    color: #0072b1;
+}
+
+@media screen and (max-width: 1140px) {
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        padding: 4%;
+    }
+
+    .aboutBackground {
+        padding: 30px;
+    }
+}
+
+@media screen and (min-width: 1140px) {
+    .aboutBackground {
+        padding-right: 850px;
+        padding-left: 50px;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}
+
+.aboutBackground {
+    background: linear-gradient(to right bottom,
+            rgba(27, 149, 47, 0.1),
+            rgba(30, 108, 217, 0.1)), url(about.jpg) no-repeat center;
+    background-size: cover;
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.aboutH1 {
+    font-size: 39px;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(to right bottom,
+            #88bdbc,
+            #254E58);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.profile-container {
+    content: "";
+    display: table;
+    color: black;
+    align-items: center;
+    margin-left: 16%;
+    margin-top: 50px;
+}
+
+.AboutcoverH1 {
+    background: linear-gradient(to left bottom,
+            #88bdbc,
+            #e0e3e4);
+    color: transparent;
+    background-clip: text;
+    font-size: 50px;
+    text-align: center;
+    animation-duration: 1.1s;
+    animation-name: slideup;
+}
+
+@keyframes slideup {
+    from {
+        margin-bottom: 100%;
+    }
+
+    to {
+        margin-bottom: 0%;
+    }
+}
+
+.profile-card {
+    float: left;
+    background-color: rgba(34, 40, 49, 0.9);
+    padding: 20px 60px;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 #ccc;
+    transition: .3s;
+    box-shadow: rgba(0, 0, 0, 0.7);
+    color: white;
+    min-height: 20rem;
+    padding-bottom: 30px;
+    margin: 3%;
+    margin-left: 3%;
+}
+
+@media screen and (max-width: 1000px) {
+    .profile-name {
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .profile-card {
+        padding: 50px;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+    }
+
+    .profile-name {
+        font-size: 16px;
+    }
+}
+
+.profile-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 25px -5px rgb(147, 141, 141);
+}
+
+.profile-icon {
+    height: 160px;
+    width: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 1px 5px #88bdbc;
+}
+
+.profile-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 25px 0 10px 0;
+}
+
+.profile-description {
+    font-size: 17px;
+    color: #777;
+}
+
+.social-profile {
+    cursor: pointer;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.button-profile {
+    display: inline-block;
+    padding: 12px 50px;
+    color: #88bdbc;
+    border: 2px solid #88bdbc;
+    border-radius: 6px;
+    transition: .3s linear;
+}
+
+.button-profile:hover {
+    color: #fff;
+    background: #145e9b;
+    border: 1px solid #145e9b;
+}
+
+.topInfo {
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    background: linear-gradient(to right bottom,
+            #88bdbc,
+            #29535e);
+    color: rgb(213, 230, 235);
+    font-size: 22px;
+    animation-duration: 1.3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%;
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%;
+    }
+}

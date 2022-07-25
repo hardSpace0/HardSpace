@@ -1,0 +1,160 @@
+.Navbar {
+  width: 100%;
+  height: 80px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #254E58;
+}
+
+.Navbar .nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  padding: 1rem;
+}
+
+.nav-signup {
+  height: 50px;
+  width: 90px;
+  background: linear-gradient(#e60909, #cc800e);
+  border: 0px solid #556699;
+  border-radius: 1000px;
+  box-shadow: 0 1px #444444;
+  color: #ffffff;
+  display: inline-block;
+  font: normal bold 14px/1 "Komika", cursive;
+  text-shadow: 1px 1px #000000;
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10%;
+}
+
+.nav-menu {
+  display: flex;
+}
+
+.nav-menu li {
+  padding: 0 1rem;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-menu a {
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.Navbar h2 {
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+.nav-signup:hover {
+  box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
+  color: rgb(212, 212, 206);
+}
+
+.navLink:hover {
+  color: #112d32;
+}
+
+@media screen and (max-width:1240px) {
+  .hamburger {
+    display: flex;
+    color: #eee;
+  }
+
+  .nav-menu {
+    position: absolute;
+    flex-direction: column;
+    justify-content: start;
+    top: 80px;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    transition: 0.4s;
+    z-index: 2;
+    background-color: #254E58;
+    border-left: 1px solid #eee;
+  }
+
+  .nav-menu.active {
+    right: 0.01rem;
+    color: red;
+  }
+
+  .nav-menu li {
+    padding: 1rem;
+    width: 100%;
+    border-bottom: 1px solid #88bdbc;
+  }
+
+  .nav-menu a {
+    font-size: 1.2rem;
+  }
+}
+
+.logout {
+  background-color: #e3e9ea;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.logoutBtn {
+  font-size: medium;
+  text-align: center;
+  justify-items: center;
+  border: 1px solid #356a78;
+  border-radius: 10px;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  padding: 5px;
+  color: #254E58;
+}
+
+.logoutBtn:hover {
+  box-shadow: rgb(0 0 0 / 15%) 0px 8px 24px;
+  color: rgb(68, 118, 154);
+}
+
+.lang {
+  height: 30px;
+  width: 60px;
+  color: #254E58;
+  font-size: large;
+  border-radius: 5px;
+}
+
+.languages {
+  height: 30px;
+  width: 60px;
+  color: #254E58;
+  font-size: medium;
+  border-radius: 5px;
+  justify-content: center;
+  align-self: center;
+}
+
+.leftNav {
+  display: flex;
+}

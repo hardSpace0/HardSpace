@@ -1,0 +1,63 @@
+.FAQSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    background: #112D32;
+}
+
+.FAQContainer {
+    position: absolute;
+    top: 25%;
+    box-shadow: 2px 10px 35px 1px rgba(153, 153, 153, 0.3);
+    max-width: 1000px;
+}
+
+.DropdownFAQ {
+    background: #112D32;
+    width: 100%;
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #2fc9c6;
+    border-top: 1px solid #2fc9c6;
+}
+
+.DropdownFAQ p {
+    font-size: 2rem;
+}
+
+.Wrap {
+    background: #88bdbc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Wrap h1 {
+    padding: 2rem;
+    font-size: 2rem;
+}
+
+.Wrap span {
+    margin-right: 1.5rem;
+}
+
+.headerFAQ {
+    color: white;
+    padding: 5px;
+}
+
+@media screen and (max-width:1240px) {
+    .FAQContainer {
+        width: auto;
+    }
+
+}

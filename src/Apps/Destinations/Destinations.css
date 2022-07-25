@@ -1,0 +1,269 @@
+.Destinations {
+    content: "";
+    display: table;
+    color: black;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 60px;
+    margin-top: 50px;
+}
+
+.tour {
+    float: left;
+    width: 26%;
+    align-items: center;
+    justify-content: center;
+    transition: 1s ease-in-out;
+    transform-style: preserve-3d;
+    min-height: 550px;
+    background-image: radial-gradient(100% 100% at 100% 0, #0e567f80 0, #5a8ba5 100%);
+    padding: 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    box-shadow: 0 0 2px 0 #ccc;
+    transition: .3s;
+    color: white;
+    margin: 30px;
+    margin-left: 75px;
+    box-shadow: rgba(114, 121, 126, 0.5) 0px 7px 39px 0px;
+}
+
+.tourImg {
+    width: 85%;
+    height: 10%px;
+}
+
+.desc_tour {
+    color: black;
+}
+
+.tour_info {
+    padding: 10px;
+    margin: 10px;
+}
+
+.tour:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .12), 0 4px 8px rgba(0, 0, 0, .06);
+}
+
+.planner {
+    background-image: radial-gradient(100% 100% at 100% 0, #0e567f80 0, #5a8ba5 100%);
+    padding: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin: 30px;
+    border-radius: 10px;
+}
+
+.planForm {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1.5rem;
+}
+
+.planLabel {
+    font-size: 20px;
+    color: #1a426a;
+    text-align: center;
+
+}
+
+.planDate {
+    cursor: pointer;
+    background-color: white;
+    margin-top: 0.5rem;
+    width: 190px;
+    font-size: 1.1rem;
+    border-radius: 3px;
+    border: solid 1px #1a426a;
+    padding: 0.3rem;
+}
+
+.planInput,
+.plannerSearch {
+    border: none;
+    width: 100%;
+    margin-top: 0.5rem;
+    background-color: white;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #f5ebe9;
+    padding: 0.3rem;
+    color: #1a426a;
+    border-radius: 3px;
+    border: solid 1px #1a426a;
+}
+
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+    .planner {
+        position: initial;
+        margin: 2rem;
+    }
+
+    .planForm {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+@media screen and (min-width: 280px) and (max-width: 920px) {
+    .tour {
+        width: 80%;
+        margin: 35px;
+        margin-left: 10%;
+    }
+
+    .planSearch {
+        margin-top: 20px;
+    }
+}
+
+
+@media screen and (min-width: 280px) and (max-width: 920px) {
+    .Destinations {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+}
+
+@media screen and (min-width: 920px) and (max-width: 1490px) {
+    .Destinations {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tour {
+        width: 39%;
+    }
+}
+
+
+.planSearch {
+    position: relative;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline-offset: 4px;
+    transition: filter 250ms;
+    touch-action: manipulation;
+}
+
+.planSearch-shadow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: rgba(16, 35, 50, 0.25);
+    will-change: transform;
+    transform: translateY(2px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+}
+
+.planSearch-edge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: linear-gradient(to left,
+            rgb(113, 151, 184) 0%,
+            hsl(203, 32%, 50%) 8%,
+            hsl(203, 32%, 50%) 92%,
+            rgb(113, 151, 184) 100%);
+}
+
+.planSearch-front {
+    display: block;
+    border-radius: 10px;
+    color: white;
+    background: hsl(203, 43%, 40%);
+    will-change: transform;
+    transform: translateY(-4px);
+    transition: transform 600ms cubic-bezier(.3, .7, .4, 1);
+    font-size: 1rem;
+    padding: 6px 22px;
+}
+
+
+.planSearch:hover {
+    filter: brightness(110%);
+    -webkit-filter: brightness(110%);
+}
+
+.planSearch:hover .planSearch-front {
+    transform: translateY(-6px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.planSearch:active .planSearch-front {
+    transform: translateY(-2px);
+    transition: transform 34ms;
+}
+
+.planSearch:hover .planSearch-shadow {
+    transform: translateY(4px);
+    transition: transform 250ms cubic-bezier(.3, .7, .4, 1.5);
+}
+
+.planSearch:active .planSearch-shadow {
+    transform: translateY(1px);
+    transition: transform 34ms;
+}
+
+.planSearch:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.cardButton {
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, #215564 0, #2f5391 100%);
+    border: 0;
+    border-radius: 6px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    display: inline-flex;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    transition: box-shadow .15s, transform .15s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    will-change: box-shadow, transform;
+    font-size: 18px;
+}
+
+.cardButton:focus {
+    box-shadow: #3c4fe0 0 0 0 1.5px inset, rgba(45, 35, 66, .4) 0 2px 4px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+}
+
+.cardButton:hover {
+    box-shadow: rgba(45, 35, 66, .4) 0 4px 8px, rgba(45, 35, 66, .3) 0 7px 13px -3px, #3c4fe0 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+
+.cardButton:active {
+    box-shadow: #444b7d 0 3px 7px inset;
+    transform: translateY(2px);
+}
